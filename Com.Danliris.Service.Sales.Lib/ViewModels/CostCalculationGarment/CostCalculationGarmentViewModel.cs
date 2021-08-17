@@ -92,6 +92,10 @@ namespace Com.Danliris.Service.Sales.Lib.ViewModels.CostCalculationGarment
 
         public bool IsPosted { get; set; }
 
+        public int SourceId { get; set; }
+        public string SourceName { get; set; }
+        public string SourceCode { get; set; }
+
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
             if (PreSCId < 1 || string.IsNullOrWhiteSpace(PreSCNo))

@@ -78,7 +78,11 @@ namespace Com.Danliris.Service.Sales.Lib.AutoMapperProfiles.CostCalculationGarme
               .ForPath(d => d.ApprovalPPIC.ApprovedBy, opt => opt.MapFrom(s => s.ApprovedPPICBy))
               .ForPath(d => d.ApprovalPPIC.ApprovedDate, opt => opt.MapFrom(s => s.ApprovedPPICDate))
 
-              .ReverseMap();
+			  .ForPath(d => d.SourceCode, opt => opt.MapFrom(s => s.SourceCode))
+			  .ForPath(d => d.SourceId, opt => opt.MapFrom(s => s.SourceId))
+			  .ForPath(d => d.SourceName, opt => opt.MapFrom(s => s.SourceName))
+
+			  .ReverseMap();
 		}
 	}
 }
