@@ -164,5 +164,37 @@ namespace Com.Danliris.Service.Sales.Lib.Models.CostCalculationGarments
         public int SourceId { get; set; }
         public string SourceName { get; set; }
         public string SourceCode { get; set; }
+        
+        public int ProcessId { get; set; }
+        public string ProcessName { get; set; }
+        public string ProcessCode { get; set; }
+
+        public int MaterialId { get; set; }
+        public string MaterialName { get; set; }
+        public string MaterialCode { get; set; }
+
+        public int MaterialCompositionId { get; set; }
+        public string MaterialCompositionName { get; set; }
+        public string MaterialCompositionCode { get; set; }
+
+        public int CollectionId { get; set; }
+        public string CollectionName { get; set; }
+        public string CollectionCode { get; set; }
+
+        public int SeasonId { get; set; }
+        public string SeasonName { get; set; }
+        public string SeasonCode { get; set; }
+
+        public int CounterId { get; set; }
+        public string CounterName { get; set; }
+        public string CounterCode { get; set; }
+
+        public int SubCounterId { get; set; }
+        public string SubCounterName { get; set; }
+        public string SubCounterCode { get; set; }
+
+        public int CategoryId { get; set; }
+        public string CategoryName { get; set; }
+        public string CategoryCode { get; set; }
     }
 }

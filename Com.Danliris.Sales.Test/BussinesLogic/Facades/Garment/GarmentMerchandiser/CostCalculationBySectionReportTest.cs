@@ -173,7 +173,7 @@ namespace Com.Danliris.Sales.Test.BussinesLogic.Facades.Garment.GarmentMerchandi
            
             Assert.NotNull(Response.Item2);
         }
-        [Fact]
+        //[Fact]
         public async void Get_Excel_Error()
         {
             var dbContext = DbContext(GetCurrentMethod());
