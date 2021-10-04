@@ -78,7 +78,43 @@ namespace Com.Danliris.Service.Sales.Lib.AutoMapperProfiles.CostCalculationGarme
               .ForPath(d => d.ApprovalPPIC.ApprovedBy, opt => opt.MapFrom(s => s.ApprovedPPICBy))
               .ForPath(d => d.ApprovalPPIC.ApprovedDate, opt => opt.MapFrom(s => s.ApprovedPPICDate))
 
-              .ReverseMap();
+			  .ForPath(d => d.SourceCode, opt => opt.MapFrom(s => s.SourceCode))
+			  .ForPath(d => d.SourceId, opt => opt.MapFrom(s => s.SourceId))
+			  .ForPath(d => d.SourceName, opt => opt.MapFrom(s => s.SourceName))
+
+			  .ForPath(d => d.process._id, opt => opt.MapFrom(s => s.ProcessId))
+			  .ForPath(d => d.process.name, opt => opt.MapFrom(s => s.ProcessName))
+			  .ForPath(d => d.process.code, opt => opt.MapFrom(s => s.ProcessCode))
+
+			  .ForPath(d => d.materials._id, opt => opt.MapFrom(s => s.MaterialId))
+			  .ForPath(d => d.materials.name, opt => opt.MapFrom(s => s.MaterialName))
+			  .ForPath(d => d.materials.code, opt => opt.MapFrom(s => s.MaterialCode))
+
+			  .ForPath(d => d.materialCompositions._id, opt => opt.MapFrom(s => s.MaterialCompositionId))
+			  .ForPath(d => d.materialCompositions.name, opt => opt.MapFrom(s => s.MaterialCompositionName))
+			  .ForPath(d => d.materialCompositions.code, opt => opt.MapFrom(s => s.MaterialCompositionCode))
+
+			  .ForPath(d => d.collections._id, opt => opt.MapFrom(s => s.CollectionId))
+			  .ForPath(d => d.collections.name, opt => opt.MapFrom(s => s.CollectionName))
+			  .ForPath(d => d.collections.code, opt => opt.MapFrom(s => s.CollectionCode))
+
+			  .ForPath(d => d.seasons._id, opt => opt.MapFrom(s => s.SeasonId))
+			  .ForPath(d => d.seasons.name, opt => opt.MapFrom(s => s.SeasonName))
+			  .ForPath(d => d.seasons.code, opt => opt.MapFrom(s => s.SeasonCode))
+
+			  .ForPath(d => d.counters._id, opt => opt.MapFrom(s => s.CounterId))
+			  .ForPath(d => d.counters.name, opt => opt.MapFrom(s => s.CounterName))
+			  .ForPath(d => d.counters.code, opt => opt.MapFrom(s => s.CounterCode))
+
+			  .ForPath(d => d.subCounters._id, opt => opt.MapFrom(s => s.SubCounterId))
+			  .ForPath(d => d.subCounters.name, opt => opt.MapFrom(s => s.SubCounterName))
+			  .ForPath(d => d.subCounters.code, opt => opt.MapFrom(s => s.SubCounterCode))
+
+			  .ForPath(d => d.categories._id, opt => opt.MapFrom(s => s.CategoryId))
+			  .ForPath(d => d.categories.name, opt => opt.MapFrom(s => s.CategoryName))
+			  .ForPath(d => d.categories.code, opt => opt.MapFrom(s => s.CategoryCode))
+
+			  .ReverseMap();
 		}
 	}
 }

@@ -4,14 +4,16 @@ using Com.Danliris.Service.Sales.Lib;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Com.Danliris.Service.Sales.Lib.Migrations
 {
     [DbContext(typeof(SalesDbContext))]
-    partial class SalesDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210813080806_AddColumnSourceIdOnCostCalculationGarment")]
+    partial class AddColumnSourceIdOnCostCalculationGarment
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -236,20 +238,8 @@ namespace Com.Danliris.Service.Sales.Lib.Migrations
                     b.Property<string>("BuyerName")
                         .HasMaxLength(255);
 
-                    b.Property<string>("CategoryCode");
-
-                    b.Property<int>("CategoryId");
-
-                    b.Property<string>("CategoryName");
-
                     b.Property<string>("Code")
                         .HasMaxLength(50);
-
-                    b.Property<string>("CollectionCode");
-
-                    b.Property<int>("CollectionId");
-
-                    b.Property<string>("CollectionName");
 
                     b.Property<double>("CommissionPortion");
 
@@ -270,12 +260,6 @@ namespace Com.Danliris.Service.Sales.Lib.Migrations
                     b.Property<DateTimeOffset>("ConfirmDate");
 
                     b.Property<double>("ConfirmPrice");
-
-                    b.Property<string>("CounterCode");
-
-                    b.Property<int>("CounterId");
-
-                    b.Property<string>("CounterName");
 
                     b.Property<string>("CreatedAgent")
                         .IsRequired()
@@ -357,18 +341,6 @@ namespace Com.Danliris.Service.Sales.Lib.Migrations
 
                     b.Property<int>("LeadTime");
 
-                    b.Property<string>("MaterialCode");
-
-                    b.Property<string>("MaterialCompositionCode");
-
-                    b.Property<int>("MaterialCompositionId");
-
-                    b.Property<string>("MaterialCompositionName");
-
-                    b.Property<int>("MaterialId");
-
-                    b.Property<string>("MaterialName");
-
                     b.Property<double>("NETFOB");
 
                     b.Property<double>("NETFOBP");
@@ -389,12 +361,6 @@ namespace Com.Danliris.Service.Sales.Lib.Migrations
 
                     b.Property<string>("PreSCNo")
                         .HasMaxLength(255);
-
-                    b.Property<string>("ProcessCode");
-
-                    b.Property<int>("ProcessId");
-
-                    b.Property<string>("ProcessName");
 
                     b.Property<double>("ProductionCost");
 
@@ -436,12 +402,6 @@ namespace Com.Danliris.Service.Sales.Lib.Migrations
 
                     b.Property<double>("SMV_Total");
 
-                    b.Property<string>("SeasonCode");
-
-                    b.Property<int>("SeasonId");
-
-                    b.Property<string>("SeasonName");
-
                     b.Property<string>("Section")
                         .HasMaxLength(50);
 
@@ -456,12 +416,6 @@ namespace Com.Danliris.Service.Sales.Lib.Migrations
                     b.Property<int>("SourceId");
 
                     b.Property<string>("SourceName");
-
-                    b.Property<string>("SubCounterCode");
-
-                    b.Property<int>("SubCounterId");
-
-                    b.Property<string>("SubCounterName");
 
                     b.Property<int>("THRId");
 

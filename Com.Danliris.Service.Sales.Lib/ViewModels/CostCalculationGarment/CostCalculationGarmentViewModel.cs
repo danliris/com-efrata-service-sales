@@ -92,6 +92,19 @@ namespace Com.Danliris.Service.Sales.Lib.ViewModels.CostCalculationGarment
 
         public bool IsPosted { get; set; }
 
+        public int SourceId { get; set; }
+        public string SourceName { get; set; }
+        public string SourceCode { get; set; }
+
+        public ItemArticleProcesViewModel process { get; set; }
+        public ItemArticleMaterialViewModel materials { get; set; }
+        public ItemArticleMaterialCompositionViewModel materialCompositions { get; set; }
+        public ItemArticleCollectionViewModel collections { get; set; }
+        public ItemArticleSeasonViewModel seasons { get; set; }
+        public ItemArticleCounterViewModel counters { get; set; }
+        public ItemArticleSubCounterViewModel subCounters { get; set; }
+        public ItemArticleCategoryViewModel categories { get; set; }
+
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
             if (PreSCId < 1 || string.IsNullOrWhiteSpace(PreSCNo))
@@ -101,6 +114,24 @@ namespace Com.Danliris.Service.Sales.Lib.ViewModels.CostCalculationGarment
 
             if (string.IsNullOrWhiteSpace(this.Article))
                 yield return new ValidationResult("Nama Artikel harus diisi", new List<string> { "Article" });
+            if (string.IsNullOrWhiteSpace(this.SourceCode))
+                yield return new ValidationResult("Asal harus diisi", new List<string> { "Source" });
+            if (string.IsNullOrWhiteSpace(this.process.code))
+                yield return new ValidationResult("Proses Harus diisi", new List<string> { "Process" });
+            if (string.IsNullOrWhiteSpace(this.materials.code))
+                yield return new ValidationResult("Bahan harus diisi", new List<string> { "Materials" });
+            if (string.IsNullOrWhiteSpace(this.materialCompositions.code))
+                yield return new ValidationResult("Komposisi Bahan harus diisi", new List<string> { "MaterialCompositions" });
+            if (string.IsNullOrWhiteSpace(this.collections.code))
+                yield return new ValidationResult("Koleksi harus diisi", new List<string> { "Collections" });
+            if (string.IsNullOrWhiteSpace(this.seasons.code))
+                yield return new ValidationResult("Season harus diisi", new List<string> { "Seasons" });
+            if (string.IsNullOrWhiteSpace(this.counters.code))
+                yield return new ValidationResult("Konter harus diisi", new List<string> { "Counters" });
+            if (string.IsNullOrWhiteSpace(this.subCounters.code))
+                yield return new ValidationResult("Style harus diisi", new List<string> { "SubCounters" });
+            if (string.IsNullOrWhiteSpace(this.categories.code))
+                yield return new ValidationResult("Kategori harus diisi", new List<string> { "Categories" });
             if (Unit == null || string.IsNullOrWhiteSpace(this.Unit.Code))
                 yield return new ValidationResult("Konveksi harus diisi", new List<string> { "Unit" });
             if (Comodity == null || string.IsNullOrWhiteSpace(Comodity.Code))
@@ -258,5 +289,61 @@ namespace Com.Danliris.Service.Sales.Lib.ViewModels.CostCalculationGarment
         public bool IsApproved { get; set; }
         public DateTimeOffset ApprovedDate { get; set; }
         public string ApprovedBy { get; set; }
+    }
+
+    public class ItemArticleProcesViewModel
+    {
+        public int _id { get; set; }
+        public string name { get; set; }
+        public string code { get; set; }
+    }
+
+    public class ItemArticleMaterialViewModel
+    {
+        public int _id { get; set; }
+        public string name { get; set; }
+        public string code { get; set; }
+    }
+
+    public class ItemArticleMaterialCompositionViewModel
+    {
+        public int _id { get; set; }
+        public string name { get; set; }
+        public string code { get; set; }
+    }
+
+    public class ItemArticleCollectionViewModel
+    {
+        public int _id { get; set; }
+        public string name { get; set; }
+        public string code { get; set; }
+    }
+
+    public class ItemArticleSeasonViewModel
+    {
+        public int _id { get; set; }
+        public string name { get; set; }
+        public string code { get; set; }
+    }
+
+    public class ItemArticleCounterViewModel
+    {
+        public int _id { get; set; }
+        public string name { get; set; }
+        public string code { get; set; }
+    }
+
+    public class ItemArticleSubCounterViewModel
+    {
+        public int _id { get; set; }
+        public string name { get; set; }
+        public string code { get; set; }
+    }
+
+    public class ItemArticleCategoryViewModel
+    {
+        public int _id { get; set; }
+        public string name { get; set; }
+        public string code { get; set; }
     }
 }
