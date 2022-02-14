@@ -323,10 +323,10 @@ namespace Com.Danliris.Service.Sales.Lib.Migrations
 //                 name: "ArticleColor",
 //                 newName: "ArticleColors");
 
-//             migrationBuilder.AddColumn<string>(
-//                 name: "SourceCode",
-//                 table: "CostCalculationGarments",
-//                 nullable: true);
+            migrationBuilder.AddColumn<string>(
+                name: "SourceCode",
+                table: "CostCalculationGarments",
+                nullable: true);
 
             migrationBuilder.AddColumn<int>(
                 name: "SourceId",
