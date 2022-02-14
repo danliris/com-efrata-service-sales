@@ -328,16 +328,16 @@ namespace Com.Danliris.Service.Sales.Lib.Migrations
                 table: "CostCalculationGarments",
                 nullable: true);
 
-            migrationBuilder.AddColumn<int>(
-                name: "SourceId",
-                table: "CostCalculationGarments",
-                nullable: false,
-                defaultValue: 0);
+//             migrationBuilder.AddColumn<int>(
+//                 name: "SourceId",
+//                 table: "CostCalculationGarments",
+//                 nullable: false,
+//                 defaultValue: 0);
 
-            migrationBuilder.AddColumn<string>(
-                name: "SourceName",
-                table: "CostCalculationGarments",
-                nullable: true);
+//             migrationBuilder.AddColumn<string>(
+//                 name: "SourceName",
+//                 table: "CostCalculationGarments",
+//                 nullable: true);
 
 //             migrationBuilder.AddPrimaryKey(
 //                 name: "PK_ArticleColors",
